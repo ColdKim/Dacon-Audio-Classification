@@ -1,0 +1,16 @@
+1. STFT
+MEL보다는 더 많은 정보를 담고 있을 것이라 예상 / 데이터 사이즈가 커짐
+
+2. MEL
+2-1 n_mel 변경 : 필터 수에 따른 다양한 해상력 예상 / x.shape[0]이 경우마다 달라짐
+2-2 hop_length 변경 : x.shape[1]이 경우마다 달라짐 / x.shape[1]이 경우마다 달라짐
+
+3. time series model?
+feature 추출을 하면 데이터 형태가 [frequency, time] 형태이므로 시계열 모델이 적합하지 않을까 / 아무도 안 함
+
+private 
+1등 : 여러 win_length에 따라 여러 데이터 사용, 전체 데이터 다 만들고 min-max 스케일링
+3등 : set_length에서 길이가 mini보다 큰 경우, 시작~시작+mini에서 시작을 랜덤하게 설정
+20등 : "만약 librosa 는 정규화된 결과가 추출되니, librosa를 사용하는 경우 LayerNormalization를 제거하는게 좋습니당~(저는 scipy써요~)"
+4등 : 정규화 때 평균 빼주기만 함
+2등 : normalization, min-max 둘 다 사용해서 앙상블

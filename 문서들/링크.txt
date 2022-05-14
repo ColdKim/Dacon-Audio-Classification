@@ -1,0 +1,15 @@
+	푸리에 변환
+https://darkpgmr.tistory.com/171
+https://hyongdoc.tistory.com/401?category=884319
+
+
+	파라미터 설명
+https://dacon.io/competitions/official/235616/codeshare/1305?page=1&dtype=recent&ptype=pub
+
+	audio deep learning 개괄
+https://towardsdatascience.com/audio-deep-learning-made-simple-part-1-state-of-the-art-techniques-da1d3dff2504
+
+	audio augmentation
+https://melon1024.github.io/data_aug/
+https://github.com/iver56/audiomentations
+https://arxiv.org/pdf/1904.08779.pdf
