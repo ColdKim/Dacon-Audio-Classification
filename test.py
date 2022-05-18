@@ -19,7 +19,7 @@ warnings.filterwarnings("ignore")
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 def test(file_list):
-    test_x = torch.tensor(np.load("./Spectrogram/test_x.npy", allow_pickle = True), dtype=torch.float32)
+    test_x = torch.tensor(np.load("./Spectrogram/test_x_4.npy", allow_pickle = True), dtype=torch.float32)
     test_x = test_x.reshape(-1, 1, test_x.shape[1], test_x.shape[2])
     test_ds = TensorDataset(test_x)
     test_loader = DataLoader(test_ds, batch_size = 30, shuffle=False)
@@ -28,7 +28,7 @@ def test(file_list):
 
     for file_name in tqdm(file_list):
         with torch.no_grad():
-            result_dict = torch.load(f"./model/result/{file_name}.pt")
+            result_dict = torch.load(f"./result/model/{file_name}.pt")
             model_hparam, state_dict = result_dict['hparam'], result_dict['weight']
 
             model_class = get_model(model_hparam['model'])
@@ -62,5 +62,6 @@ def make_submission_file(pred):
     submission.to_csv(f'./submission/{now.tm_mon:02d}{now.tm_mday:02d} {now.tm_hour:02d}{now.tm_min:02d}.csv', index=False)
 
 if __name__ == "__main__":
-    file_list = ["0514 " + x for x in ["1012", "1030", "1047", "1104", "1121"]]
+    file_list = ["0518 " + x for x in ["1519", "1536", "1554", "1611", "1628"]]
+    # file_list = ["0404 1043"]
     test(file_list)

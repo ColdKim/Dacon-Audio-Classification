@@ -1,4 +1,0 @@
-0404 1043 ~ 1152 : Private1등 모델 + train_x_1.npy 
-0509 1027 ~ 1137 : Private1등 모델 + train_x_2.npy 
-0513 1421 ~ 1439 : Private1등 모델 + train_x_3.npy 
-0514 1012 ~ 1121 : Private1등 모델 + train_x_3.npy + 0404 1043 pre trained

@@ -1,0 +1,16 @@
+Default : model_hparam = {"model" : "Private1st", "N" : 4}, epoch 30, n_splits=5
+
+0404 1043 ~ 1152 : train_x_1.npy 
+
+0509 1027 ~ 1137 : train_x_2.npy 
+
+0513 1421 ~ 1439 : train_x_3.npy 
+
+0514 1012 ~ 1121 : train_x_3.npy + 0404 1043 pre trained
+
+0517 1220 ~ 1234 : train_x_1.npy + epoch 30 + n_splits=2 (learning shcedular 테스트용, 사용 x)
+0517 1622 ~ 1645 : train_x_1.npy + epoch 50 + n_splits=2 (learning shcedular 테스트용, 사용 x)
+0517 1811 ~ 1825 : train_x_1.npy + epoch 30 + n_splits=2 (learning shcedular 테스트용, 사용 o)
+
+0518 1054 ~ 1204 : train_x_4.npy
+0518 1519 ~ 1628 : train_x_5.npy
